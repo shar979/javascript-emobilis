@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conditional statements</title>
+</head>
+<body>
+<script>
+    //if
+    //we use  prompt to enter a value
+     let weight = prompt("What is your weight",60)
+    let height = prompt("What is your height",1)
+    let bmi =weight/height**2
+        if (bmi<18.5){
+            alert('underweight')
+        }
+        else if(bmi>=18.5 && bmi<24.9){
+            alert('Normal')
+        }
+        else{
+            alert('See the doctor')
+        }
+
+        let result= bmi>25 ? 'overweight' :'underweight'
+    let gen = gender ==='M' ? 'Male' :'Female';
+
+</script>
+</body>
+</html>
