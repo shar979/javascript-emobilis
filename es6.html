@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es 6 Features</title>
+</head>
+<body>
+
+<script >
+    let name = "John";
+    let X = 10;
+    //TEMPLARE LITERALS
+    let greeting = `Hello, ${name}!`;
+    console.log(greeting);
+    console.log(`The value of X is: ${X}`);
+
+const add = (a, b) => a + b
+console.log(add(5, 3));
+
+//unpacking values or destructuring
+const patient = {
+     fname: "John",
+    dob: "1990-01-01",
+    gender: "M"
+    };
+
+    // let fname = patient.fname;
+    // let dob = patient.dob;
+    // let gender = patient.gender;
+
+    const { fname, dob, gender } = patient;//no order followed
+     console.log(`Patient Name: ${fname}, Date of Birth: ${dob}, Gender: ${gender}`);
+
+//unpacking an array
+    let details = ["John", "Njeri"]
+    let[name1,name2] =details
+
+//default parameters
+function divide(a, b , rounded= false) {
+    let res= a / b
+    if (rounded=== true) {
+        res = Math.round(res)
+    }
+    return res;
+}
+
+let res1 = divide(10, 3, true); // returns 3
+let res2 = divide(10, 3); // returns 3.3333333333333335
+console.log(res1, res2);
+
+//spread operator - takes any number of arguments and puts them into an array
+function flexibleAdd(...nums){
+    let total = 0
+    for (let num of nums) {
+        total += num;
+    }
+    return total
+}
+console.log(flexibleAdd(1, 2, 3, 4, 5)); // returns 15
+    //spread operator allows you join parameters
+    let people=["Mazuri", "Kim"]
+    let others =["John","Doe"]
+    let merged = [...people,...others, "Hilda", "Ahmed"]
+    console.log(merged)
+
+    let data = [[...people,"Hilda", "Ahmed"]]
+
+
+</script>
+
+</body>
+</html>
